@@ -22,21 +22,33 @@ public class FizzBuzz {
         System.out.print("Serie: ");
 
         for (num = 1; num <= 100; num++) {
+            if(num % 3 == 0 && num % 5 == 0){
+                System.out.print("fizzbuzz, ");
+                continue;
+            }
+            if(num % 3 == 0){
+                System.out.print("fizz, ");
+                continue;
+            }
+            if(num % 5 == 0){
+                System.out.print("buzz, ");
+                continue;
+            }
             System.out.print(num + ", ");
         }
     }
 
-    public String fizz () {
+    public String fizzBuzz () {
+        if(this.number % 3 == 0 && this.number % 5 == 0){
+            return "fizzbuzz";
+        }
         if(this.number % 3 == 0){
             return "fizz";
         }
-        return String.valueOf(this.number);
-    }
-
-    public String buzz () {
         if(this.number % 5 == 0){
             return "buzz";
         }
         return String.valueOf(this.number);
     }
+
 }
